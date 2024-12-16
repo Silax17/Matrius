@@ -22,11 +22,38 @@ public class Main {
 			}
 		}
 		for (int i = 0; i < matriu.length; i++) {
-			for(int j = 0; j < matriu[0].length; j++) {
+			for(int j = 0; j < matriu[i].length; j++) {
 				System.out.print(matriu[i][j] + "  ");
 			}
 			System.out.println();
 		}
+		int fila=0;
+		int columna=0;
+		boolean putero=false;
+		for(int i=0;i<matriu.length;i++) {
+			for(int j=0;j<matriu[i].length;j++) {
+				if(matriu[i][j]==patata) {
+					fila=i;
+					columna=j;
+					putero=true;
+				}
+				else {
+					putero=false;
+					
+				}
+				
+			}
+		}
+		if(putero) {
+			System.out.println("Existeix a l'arrau");
+			System.out.println("Fila: "+fila);
+			System.out.println("Columna: "+columna);
+		}
+		else {
+			System.out.println("No existeix");
+		}
+					
+		
 
 	}
 
